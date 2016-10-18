@@ -9,10 +9,10 @@ defutf8 on
 altscreen on
  
 # Dynamic title
-shelltitle '$ |bash'
+shelltitle '$ |'
 
 defencoding utf8
-hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %M %d %0c:%s "
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %Y/%m/%d%{= .m} %0c:%s "
  
 #term screen-256color
 attrcolor b ".I"
