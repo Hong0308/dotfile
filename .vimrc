@@ -13,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'dracula/vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bronson/vim-trailing-whitespace'
@@ -42,6 +41,7 @@ filetype plugin indent on    " required
 syntax enable
 syntax on
 set t_Co=256
+set background=dark
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -83,3 +83,7 @@ map <S-H> gT
 " go to next tab
 map <S-L> gt
 
+" colorscheme
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
