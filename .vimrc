@@ -83,7 +83,8 @@ map <S-H> gT
 " go to next tab
 map <S-L> gt
 
-" colorscheme
-colorscheme molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
+" Line
+set cursorline
+hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=NONE
+hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
+hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE
