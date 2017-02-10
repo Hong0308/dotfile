@@ -54,6 +54,7 @@ set nu
 set hlsearch
 set ignorecase
 set incsearch
+set ff=unix
 
 " set status line
 set laststatus=2
