@@ -191,3 +191,12 @@ set cursorline
 hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=NONE
 hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
 hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE
+
+" 回到上次編輯的地方 (viminfo 要擁有寫入權限)
+if has("autocmd")
+    autocmd BufRead *.txt set tw=78
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal g'\"" |
+    \ endif
+endif
