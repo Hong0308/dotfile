@@ -77,7 +77,7 @@ let g:currentmode={
             \ 'no' : 'N·Operator Pending ',
             \ 'v'  : 'V ',
             \ 'V'  : 'V·Line ',
-            \ '^V' : 'V·Block ', 
+            \ '^V' : 'V·Block ',
             \ 's'  : 'Select ',
             \ 'S'  : 'S·Line ',
             \ '^S' : 'S·Block ',
