@@ -4,3 +4,4 @@ git config --global color.branch auto
 git config --global color.interactive auto
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 git config --global core.editor vim
+git config --global core.autocrlf true
