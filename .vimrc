@@ -200,3 +200,6 @@ if has("autocmd")
     \   exe "normal g'\"" |
     \ endif
 endif
+
+" 自動移除 Windows 換行符號 ^M
+autocmd BufWritePre * :%s/\s\+$//e
