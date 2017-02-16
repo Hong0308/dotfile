@@ -203,3 +203,7 @@ endif
 
 " 自動移除 Windows 換行符號 ^M
 autocmd BufWritePre * :%s/\s\+$//e
+
+" 自動補全方向
+let g:SuperTabRetainCompletionType = 2
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
