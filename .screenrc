@@ -12,7 +12,12 @@ altscreen on
 shelltitle '$ |'
 
 defencoding utf8
-hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %Y/%m/%d%{= .m} %0c:%s "
+
+hardstatus alwayslastline
+
+# Very nice tabbed colored hardstatus line
+hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %Y-%m-%d %D %{= Kc}%C%A%{-}'
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %Y/%m/%d%{= .m} %0c:%s "
 
 #term screen-256color
 attrcolor b ".I"
@@ -20,4 +25,4 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce on
 
 # set default shell
-shell "/usr/bin/zsh"
+#shell "/usr/bin/zsh"
