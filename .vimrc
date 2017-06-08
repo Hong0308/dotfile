@@ -22,6 +22,7 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'Yggdroot/indentLine'
 
 
 " All of your Plugins must be added before the following line
