@@ -7,4 +7,5 @@ git config --global core.editor vim
 git config --global core.autocrlf input
 git config --global alias.st "status"
 git config --global alias.pl "pull"
+git config --global alias.dfn "diff master --name-only"
 
