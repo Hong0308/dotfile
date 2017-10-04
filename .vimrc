@@ -23,6 +23,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Yggdroot/indentLine'
+Bundle 'stephpy/vim-php-cs-fixer'
 
 
 " All of your Plugins must be added before the following line
@@ -204,6 +205,7 @@ endif
 
 " 自動移除 Windows 換行符號 ^M
 autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\r/\r/g
 
 " 自動補全方向
 let g:SuperTabRetainCompletionType = 2
