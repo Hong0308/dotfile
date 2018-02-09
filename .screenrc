@@ -16,7 +16,7 @@ defencoding utf8
 hardstatus alwayslastline
 
 # Very nice tabbed colored hardstatus line
-hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %Y-%m-%d %D %{= Kc}%C%A%{-}'
+hardstatus string '%{= Kd} %{= Kd}%-w%{= Kb}[%{= KW}%n %t%{= Kb}]%{= Kd}%+w %-= %{KG} %Y-%m-%d %D %{= Kc}%C%A%{-}'
 #hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %Y/%m/%d%{= .m} %0c:%s "
 
 #term screen-256color
