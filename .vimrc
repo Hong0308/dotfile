@@ -11,16 +11,16 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " plugin on GitHub repo
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'ervandew/supertab'
-Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Yggdroot/indentLine'
-Plugin 'stephpy/vim-php-cs-fixer'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ntpeters/vim-better-whitespace' "結尾空白顯示
+Plugin 'jiangmiao/auto-pairs' "括號自動補齊
+Plugin 'ervandew/supertab' "用 tab 選取候選字詞
+Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
+Plugin 'vim-syntastic/syntastic' "語法檢查
+Plugin 'tpope/vim-fugitive' "git 操作
+Plugin 'Yggdroot/indentLine' "縮排線
+Plugin 'kien/ctrlp.vim' "快速尋找檔案
+Plugin 'stephpy/vim-php-cs-fixer' "PHP Coding Style Check
+Plugin 'StanAngeloff/php.vim' "PHP 語法顏色調整
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
