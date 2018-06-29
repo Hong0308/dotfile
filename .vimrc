@@ -21,6 +21,8 @@ Plugin 'Yggdroot/indentLine' "縮排線
 Plugin 'kien/ctrlp.vim' "快速尋找檔案
 Plugin 'stephpy/vim-php-cs-fixer' "PHP Coding Style Check
 Plugin 'StanAngeloff/php.vim' "PHP 語法顏色調整
+Plugin '2072/PHP-Indenting-for-VIm' "PHP 縮排調整
+Plugin 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

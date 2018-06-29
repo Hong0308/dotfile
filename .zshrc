@@ -90,5 +90,5 @@ DISABLE_AUTO_TITLE="true"
 
 
 # Mac 終端機轉碼
-export LC_ALL="zh_TW.UTF-8"
-export LANG="zh_TW.UTF-8"
+#export LC_ALL="zh_TW.UTF-8"
+#export LANG="zh_TW.UTF-8"
