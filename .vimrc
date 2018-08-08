@@ -14,7 +14,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ntpeters/vim-better-whitespace' "結尾空白顯示
 Plugin 'jiangmiao/auto-pairs' "括號自動補齊
 Plugin 'ervandew/supertab' "用 tab 選取候選字詞
-Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
+"Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
+"Plugin 'neocomplcache' "程式碼自動補全
+"Plugin 'shawncplus/phpcomplete.vim' "程式碼自動補全
 Plugin 'vim-syntastic/syntastic' "語法檢查
 Plugin 'tpope/vim-fugitive' "git 操作
 Plugin 'Yggdroot/indentLine' "縮排線
@@ -84,3 +86,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " 自動補全方向
 let g:SuperTabRetainCompletionType = 2
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
+" 程式碼自動補全
+"let g:neocomplete#enable_at_startup = 1
