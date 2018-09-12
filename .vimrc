@@ -14,17 +14,18 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ntpeters/vim-better-whitespace' "結尾空白顯示
 Plugin 'jiangmiao/auto-pairs' "括號自動補齊
 Plugin 'ervandew/supertab' "用 tab 選取候選字詞
-"Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
-"Plugin 'neocomplcache' "程式碼自動補全
-"Plugin 'shawncplus/phpcomplete.vim' "程式碼自動補全
 Plugin 'vim-syntastic/syntastic' "語法檢查
 Plugin 'tpope/vim-fugitive' "git 操作
 Plugin 'Yggdroot/indentLine' "縮排線
 Plugin 'kien/ctrlp.vim' "快速尋找檔案
+
 Plugin 'stephpy/vim-php-cs-fixer' "PHP Coding Style Check
 Plugin 'StanAngeloff/php.vim' "PHP 語法顏色調整
 Plugin '2072/PHP-Indenting-for-VIm' "PHP 縮排調整
 Plugin 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
+
+"Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
+Plugin 'shawncplus/phpcomplete.vim' "程式碼自動補全
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,4 +89,5 @@ let g:SuperTabRetainCompletionType = 2
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " 程式碼自動補全
-"let g:neocomplete#enable_at_startup = 1
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+set completeopt=longest,menuone
