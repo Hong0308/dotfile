@@ -26,7 +26,7 @@ Plugin 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 
 "Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
 Plugin 'shawncplus/phpcomplete.vim' "程式碼自動補全
-Plugin 'vim-scripts/AutoComplPop' "程式碼自動補全選單
+"Plugin 'vim-scripts/AutoComplPop' "程式碼自動補全選單
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
