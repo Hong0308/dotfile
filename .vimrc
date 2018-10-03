@@ -24,9 +24,10 @@ Plugin 'StanAngeloff/php.vim' "PHP 語法顏色調整
 Plugin '2072/PHP-Indenting-for-VIm' "PHP 縮排調整
 Plugin 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 
-"Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
+Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
 Plugin 'shawncplus/phpcomplete.vim' "程式碼自動補全
 "Plugin 'vim-scripts/AutoComplPop' "程式碼自動補全選單
+Plugin 'ludovicchabant/vim-gutentags' "自動產生 tags
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
