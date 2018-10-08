@@ -18,6 +18,7 @@ Plugin 'vim-syntastic/syntastic' "語法檢查
 Plugin 'tpope/vim-fugitive' "git 操作
 Plugin 'Yggdroot/indentLine' "縮排線
 Plugin 'kien/ctrlp.vim' "快速尋找檔案
+Plugin 'mhinz/vim-signify' "顯示檔案修改的地方
 
 Plugin 'stephpy/vim-php-cs-fixer' "PHP Coding Style Check
 Plugin 'StanAngeloff/php.vim' "PHP 語法顏色調整
@@ -25,7 +26,7 @@ Plugin '2072/PHP-Indenting-for-VIm' "PHP 縮排調整
 Plugin 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 
 Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
-Plugin 'shawncplus/phpcomplete.vim' "程式碼自動補全
+"Plugin 'shawncplus/phpcomplete.vim' "程式碼自動補全
 "Plugin 'vim-scripts/AutoComplPop' "程式碼自動補全選單
 Plugin 'ludovicchabant/vim-gutentags' "自動產生 tags
 
@@ -91,5 +92,5 @@ let g:SuperTabRetainCompletionType = 2
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " 程式碼自動補全
-autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
-set completeopt=longest,menuone
+"autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+"set completeopt=longest,menuone
