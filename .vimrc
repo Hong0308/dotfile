@@ -96,4 +96,9 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "set completeopt=longest,menuone
 
 " 設定 tags 位置 (根目錄跑 ctags -R)
-"set tags=~/work/tags
+set tags=~/work/tags
+
+" 自動關閉提示 Scratch
+let g:SuperTabClosePreviewOnPopupClose = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
