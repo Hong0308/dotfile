@@ -28,7 +28,7 @@ Plugin 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
 "Plugin 'shawncplus/phpcomplete.vim' "程式碼自動補全
 "Plugin 'vim-scripts/AutoComplPop' "程式碼自動補全選單
-Plugin 'ludovicchabant/vim-gutentags' "自動產生 tags
+"Plugin 'ludovicchabant/vim-gutentags' "自動產生 tags
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,3 +94,6 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 " 程式碼自動補全
 "autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 "set completeopt=longest,menuone
+
+" 設定 tags 位置 (根目錄跑 ctags -R)
+"set tags=~/work/tags
