@@ -96,6 +96,7 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "set completeopt=longest,menuone
 
 " 設定 tags 位置 (根目錄跑 ctags -R)
+" ctags -R --exclude=web --exclude=libs/extlibs --exclude=scripts --exclude=pixframework/coverage --exclude=api-doc
 set tags=~/work/tags
 
 " 自動關閉提示 Scratch
