@@ -19,6 +19,9 @@ Plugin 'tpope/vim-fugitive' "git 操作
 Plugin 'Yggdroot/indentLine' "縮排線
 Plugin 'kien/ctrlp.vim' "快速尋找檔案
 Plugin 'mhinz/vim-signify' "顯示檔案修改的地方
+Plugin 'stephpy/vim-yaml' "YAML 格式調整
+Plugin 'pedrohdz/vim-yaml-folds' "YAML 收合
+Plugin 'elzr/vim-json' "JSON 顯示
 
 Plugin 'stephpy/vim-php-cs-fixer' "PHP Coding Style Check
 Plugin 'StanAngeloff/php.vim' "PHP 語法顏色調整
@@ -96,10 +99,15 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "set completeopt=longest,menuone
 
 " 設定 tags 位置 (根目錄跑 ctags -R)
-" ctags -R --exclude=web --exclude=libs/extlibs --exclude=scripts --exclude=pixframework/coverage --exclude=api-doc
+" ctags -R --exclude=web --exclude=libs/extlibs --exclude=libs/tests --exclude=model/tests --exclude=scripts --exclude=pixframework/coverage --exclude=api-doc
 set tags=~/work/tags
 
 " 自動關閉提示 Scratch
 let g:SuperTabClosePreviewOnPopupClose = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+set foldmethod=syntax
+let g:vim_json_syntax_conceal = 0 "JSON 冒號關閉
