@@ -7,13 +7,15 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="af-magic"
-#ZSH_THEME="spaceship"
-ZSH_THEME="igeek"
+#ZSH_THEME="flazz"
 #ZSH_THEME="ys"
-#ZSH_THEME="bira"
-#ZSH_THEME="sporty_256"
-#ZSH_THEME="amuse"
+ZSH_THEME="amuse"
+#ZSH_THEME="af-magic"
+#ZSH_THEME="dracula"
+#ZSH_THEME="wezm"
+#ZSH_THEME="muse"
+#ZSH_THEME="theunraveler"
+#ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -29,7 +31,7 @@ ZSH_THEME="igeek"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
-#DISABLE_LS_COLORS="true"
+# DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -57,6 +59,7 @@ ZSH_THEME="igeek"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+#plugins=(git zsh-autosuggestions)
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -66,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
