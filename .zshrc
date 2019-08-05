@@ -9,13 +9,12 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="flazz"
 #ZSH_THEME="ys"
-ZSH_THEME="amuse"
+#ZSH_THEME="amuse"
+#ZSH_THEME="agnoster"
 #ZSH_THEME="af-magic"
-#ZSH_THEME="dracula"
-#ZSH_THEME="wezm"
-#ZSH_THEME="muse"
-#ZSH_THEME="theunraveler"
-#ZSH_THEME="avit"
+#ZSH_THEME="dpoggi"
+#ZSH_THEME="jonathan"
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -98,3 +97,6 @@ DISABLE_AUTO_TITLE="true"
 # Mac 終端機轉碼
 #export LC_ALL="zh_TW.UTF-8"
 #export LANG="zh_TW.UTF-8"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
