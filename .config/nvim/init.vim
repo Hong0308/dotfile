@@ -54,6 +54,8 @@ Plug 'StanAngeloff/php.vim' "PHP 語法顏色調整
 Plug '2072/PHP-Indenting-for-VIm' "PHP 縮排調整
 Plug 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 
+Plug 'zxqfl/tabnine-vim' // 機器學習提示
+
 " Initialize plugin system
 call plug#end()
 
