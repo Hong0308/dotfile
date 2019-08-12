@@ -17,7 +17,7 @@ set completeopt=noinsert,menuone,noselect
 " NOTE: you need to install completion sources to get completions. Check
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
 Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-tmux'
+"Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
 
 " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
@@ -109,5 +109,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 "autocmd BufWritePre * :%s/\r/\r/g
 
 " 自動補全方向
-let g:SuperTabRetainCompletionType = 2
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+"let g:SuperTabRetainCompletionType = 2
+"let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
+" Trace code for open new tab
+nnoremap <C-]> :tabnew %<CR>g<C-]>
+vnoremap <C-]> <Esc>:tabnew %<CR>gvg<C-]>
