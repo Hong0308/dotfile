@@ -113,5 +113,4 @@ autocmd BufWritePre * :%s/\s\+$//e
 "let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " Trace code for open new tab
-nnoremap <C-]> :tabnew %<CR>g<C-]>
-vnoremap <C-]> <Esc>:tabnew %<CR>gvg<C-]>
+map <C-]> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
