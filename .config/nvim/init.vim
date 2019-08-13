@@ -1,10 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'ludovicchabant/vim-gutentags' "Generating Ctags
-Plug 'itchyny/lightline.vim' "status bar
+"Plug 'itchyny/lightline.vim' "status bar
 Plug 'stephpy/vim-php-cs-fixer' "PHP Coding Style Check
 
-" 自動補全套件 ncm2
+"自動補全套件 ncm2
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 
@@ -77,6 +77,9 @@ set ignorecase
 set incsearch
 set ff=unix
 set laststatus=2
+
+" Statusline 自定義狀態列
+source ~/.vim/source/status_line
 
 " syntastic 顯示語法檢查
 let g:syntastic_always_populate_loc_list = 1
