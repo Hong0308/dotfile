@@ -77,6 +77,8 @@ set ignorecase
 set incsearch
 set ff=unix
 set laststatus=2
+set colorcolumn=120
+
 
 " Statusline 自定義狀態列
 source ~/.vim/source/status_line
