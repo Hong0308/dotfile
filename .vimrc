@@ -31,7 +31,7 @@ Plugin 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 Plugin 'Valloric/YouCompleteMe' "程式碼自動補全
 "Plugin 'shawncplus/phpcomplete.vim' "程式碼自動補全
 "Plugin 'vim-scripts/AutoComplPop' "程式碼自動補全選單
-"Plugin 'ludovicchabant/vim-gutentags' "自動產生 tags
+Plugin 'ludovicchabant/vim-gutentags' "自動產生 tags
 Plugin 'zxqfl/tabnine-vim' " 機器學習提示
 
 " All of your Plugins must be added before the following line
@@ -101,7 +101,21 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " 設定 tags 位置 (根目錄跑 ctags -R)
 " ctags -R --fields=+aimS --languages=php --exclude=web --exclude=libs/extlibs --exclude=libs/tests --exclude=model/tests --exclude=scripts --exclude=pixframework/coverage --exclude=api-doc
-set tags=~/work/tags
+"set tags=~/work/tags
+
+" Ctags setting
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
+let g:gutentags_ctags_tagfile = '.tags'
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+
+if !isdirectory(s:vim_tags)
+    silent! call mkdir(s:vim_tags, 'p')
+endif
+
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 " 自動關閉提示 Scratch
 let g:SuperTabClosePreviewOnPopupClose = 1
