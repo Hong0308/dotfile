@@ -24,7 +24,7 @@ set noswapfile                        " Do not use a swapfile for the buffer
 "" Colors
 set background=dark                   " Dark background
 set t_Co=256                          " 256 color mode
-set termguicolors                     " Use true color in the terminal
+"set termguicolors                     " Use true color in the terminal
 
 "" Editing
 set backspace=eol,start,indent        " Controlling What the Backspace Key Does
@@ -189,7 +189,7 @@ Plug 'rafalbromirski/vim-aurora'
 Plug 'lithammer/vim-eighties'
 Plug 'dunstontc/vim-vscode-theme'
 
-colorscheme edge
+"colorscheme edge
 
 "" Searching
 Plug 'haya14busa/incsearch.vim'
