@@ -24,11 +24,10 @@ set noswapfile                        " Do not use a swapfile for the buffer
 "" Colors
 set background=dark                   " Dark background
 set t_Co=256                          " 256 color mode
-"set termguicolors                     " Use true color in the terminal
 
 "" Editing
 set backspace=eol,start,indent        " Controlling What the Backspace Key Does
-set timeoutlen=500                    " The time in milliseconds that is waited for a key code
+"set timeoutlen=500                    " The time in milliseconds that is waited for a key code
 set expandtab                         " Use the appropriate number of spaces to insert a <Tab>
 set autoindent                        " Copy indent from current line when starting a new line
 set copyindent                        " copy the previous indentation on autoindenting
@@ -55,7 +54,7 @@ set foldenable                        " Code folding
 set foldcolumn=1                      " Add a bit extra margin to the left
 
 "" Display
-set ruler                             " Shows line number and column
+"set ruler                             " Shows line number and column
 "set rulerformat=%l\:%c                " Better ruler format
 set number                            " Display line numbers
 set colorcolumn=120                  " Display a ruler at a specific line
@@ -138,22 +137,18 @@ source ~/.vim/source/status_line
 call plug#begin('~/.vim/plugged')
 
 "" Autocomplete
-Plug 'zchee/deoplete-jedi'
-
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
-let g:deoplete#enable_at_startup = 1
-let b:deoplete_disable_auto_complete=1
-let g:deoplete_disable_auto_complete=1
-let g:deoplete#sources = {}
-
 Plug 'zxqfl/tabnine-vim' " 機器學習提示
+
+Plug 'xolox/vim-easytags'
+let g:easytags_cmd = '/usr/local/bin/ctags'
+Plug 'xolox/vim-misc'
+Plug 'universal-ctags/ctags'
+set tags=./.tags;,.tags
+
+Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
+let g:SuperTabRetainCompletionType = 2
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabClosePreviewOnPopupClose = 1
 
 "" git
 Plug 'tpope/vim-fugitive' "git 操作
