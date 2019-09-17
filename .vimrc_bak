@@ -18,7 +18,6 @@ set wildchar=<TAB>                    " Start wild expansion in the command line
 set history=50                        " Keep 50 lines of command line history
 set nobackup                          " No *~ backup files
 set nowritebackup                     " Do not make a backup before overwriting a file
-set nowrapscan                        " Do not searche wrap around the end of the file
 set noswapfile                        " Do not use a swapfile for the buffer
 
 "" Colors
