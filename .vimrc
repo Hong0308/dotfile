@@ -137,12 +137,8 @@ call plug#begin('~/.vim/plugged')
 
 "" Autocomplete
 "Plug 'zxqfl/tabnine-vim' " 機器學習提示
-"Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 
-Plug 'xolox/vim-easytags'
-let g:easytags_cmd = '/usr/local/bin/ctags'
-Plug 'xolox/vim-misc'
-Plug 'universal-ctags/ctags'
 set tags=./.tags;,.tags
 
 Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
@@ -152,7 +148,6 @@ let g:SuperTabClosePreviewOnPopupClose = 1
 
 "" git
 Plug 'tpope/vim-fugitive' "git 操作
-Plug 'airblade/vim-gitgutter' "在Vim文件顯示git新增修改的符號
 
 "" Linting
 Plug 'vim-syntastic/syntastic' "語法檢查
@@ -161,7 +156,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-Plug 'dense-analysis/ale' "異步代碼檢測
+"Plug 'dense-analysis/ale' "異步代碼檢測
 
 "" Displaying
 Plug 'Yggdroot/indentLine' "縮排線
