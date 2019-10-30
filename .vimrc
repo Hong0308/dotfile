@@ -139,7 +139,16 @@ call plug#begin('~/.vim/plugged')
 "Plug 'zxqfl/tabnine-vim' " 機器學習提示
 Plug 'ycm-core/YouCompleteMe'
 
-set tags=./.tags;,.tags
+Plug 'ludovicchabant/vim-gutentags'
+"set tags=./.tags;,.tags
+
+" 搜索工程目錄的標誌，碰到這些文件/目錄名就停止向上一級目錄遞歸
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+
+"配置 ctags 的參數
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 let g:SuperTabRetainCompletionType = 2
