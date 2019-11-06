@@ -140,7 +140,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'ycm-core/YouCompleteMe'
 
 Plug 'ludovicchabant/vim-gutentags'
-"set tags=./.tags;,.tags
+let g:easytags_file = '~/.vim/tags'
+set tags=~/.vim/tags
 
 " 搜索工程目錄的標誌，碰到這些文件/目錄名就停止向上一級目錄遞歸
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
