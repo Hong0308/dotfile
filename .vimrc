@@ -35,8 +35,9 @@ set tabstop=4                         " Number of spaces that a <Tab> in the fil
 set softtabstop=4
 "set textwidth=79                      " Set the text width
 set scrolloff=7                       " No scroll offset
+"set spell                             " Spell check
 
-"" Font
+" Font
 set encoding=UTF-8                    " Set default encoding to UTF-8
 set ff=unix
 
@@ -123,6 +124,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 "" YAML file setting
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+"" generate the tags
+au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags"  ] && .git/hooks/ctags' &
+
 " Customize  ---------------------------------------------------------------------------------------------------------
 
 "" Status line
@@ -140,18 +144,18 @@ call plug#begin('~/.vim/plugged')
 Plug 'ycm-core/YouCompleteMe'
 
 "set tags=~/.vim/tags
-Plug 'ludovicchabant/vim-gutentags'
-let g:gutentags_ctags_tagfile = '.tags'
+"Plug 'ludovicchabant/vim-gutentags'
+"let g:gutentags_ctags_tagfile = '.tags'
 
 " 搜索工程目錄的標誌，碰到這些文件/目錄名就停止向上一級目錄遞歸
-let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+"let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
 
-let s:vim_tags = expand('~/.cache/tags')
-let g:gutentags_cache_dir = s:vim_tags
+"let s:vim_tags = expand('~/.cache/tags')
+"let g:gutentags_cache_dir = s:vim_tags
 
-if !isdirectory(s:vim_tags)
-   silent! call mkdir(s:vim_tags, 'p')
-endif
+"if !isdirectory(s:vim_tags)
+"   silent! call mkdir(s:vim_tags, 'p')
+"endif
 
 "配置 ctags 的參數
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
