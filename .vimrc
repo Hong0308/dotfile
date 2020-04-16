@@ -100,19 +100,10 @@ autocmd BufReadPost *
 \   exe "normal! g`\"" |
 \ endif
 
-"" go specific tab
-for i in range(1, 9)
-    exec 'noremap <Leader>'.i.' '.i.'gt'
-endfor
-
-" Keybinding
+" Keybinding ---------------------------------------------------------------------------------------------------------
 
 "" Mapleader
 let mapleader = "\<Space>"
-
-"" Splitting
-noremap <silent> <Leader>v :vsplit<CR>
-noremap <silent> <Leader>h :split<CR>
 
 "" tab change
 map <S-H> gT
@@ -124,43 +115,17 @@ autocmd BufWritePre * :%s/\s\+$//e
 "" YAML file setting
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-"" generate the tags
-au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags"  ] && .git/hooks/ctags' &
-
 " Customize  ---------------------------------------------------------------------------------------------------------
 
 "" Status line
 source ~/.vim/customize/status_line
 
 " Plugin -------------------------------------------------------------------------------------------------------------
-
-" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
 "" Autocomplete
 "Plug 'zxqfl/tabnine-vim' " 機器學習提示
 Plug 'ycm-core/YouCompleteMe'
-
-"set tags=~/.vim/tags
-"Plug 'ludovicchabant/vim-gutentags'
-"let g:gutentags_ctags_tagfile = '.tags'
-
-" 搜索工程目錄的標誌，碰到這些文件/目錄名就停止向上一級目錄遞歸
-"let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
-
-"let s:vim_tags = expand('~/.cache/tags')
-"let g:gutentags_cache_dir = s:vim_tags
-
-"if !isdirectory(s:vim_tags)
-"   silent! call mkdir(s:vim_tags, 'p')
-"endif
-
-"配置 ctags 的參數
-let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
-let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
-let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 let g:SuperTabRetainCompletionType = 2
@@ -177,8 +142,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"Plug 'dense-analysis/ale' "異步代碼檢測
-
 "" Displaying
 Plug 'Yggdroot/indentLine' "縮排線
 "Plug 'itchyny/lightline.vim'
@@ -189,18 +152,6 @@ Plug 'stephpy/vim-yaml' "YAML 格式調整
 Plug 'pedrohdz/vim-yaml-folds' "YAML 收合
 Plug 'elzr/vim-json' "JSON 顯示
 let g:vim_json_syntax_conceal = 0 "JSON 冒號關閉
-
-"" Colorscheme
-Plug 'gmoe/vim-espresso'
-Plug 'sainnhe/edge'
-Plug 'sainnhe/archived-colors'
-"Plug 'sainnhe/vim-color-lost-shrine'
-"Plug 'sainnhe/vim-color-atlantis'
-Plug 'rafalbromirski/vim-aurora'
-Plug 'lithammer/vim-eighties'
-Plug 'dunstontc/vim-vscode-theme'
-
-"colorscheme edge
 
 "" Searching
 Plug 'haya14busa/incsearch.vim'
@@ -214,5 +165,4 @@ Plug 'StanAngeloff/php.vim' "PHP 語法顏色調整
 Plug '2072/PHP-Indenting-for-VIm' "PHP 縮排調整
 Plug 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 
-" Initialize plugin system
 call plug#end()
