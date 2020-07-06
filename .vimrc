@@ -165,4 +165,7 @@ Plug 'StanAngeloff/php.vim' "PHP 語法顏色調整
 Plug '2072/PHP-Indenting-for-VIm' "PHP 縮排調整
 Plug 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 
+Plug 'kamykn/spelunker.vim'
+let g:spelunker_white_list_for_user = ['verybuy', 'taobao']
+
 call plug#end()
