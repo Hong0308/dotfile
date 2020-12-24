@@ -26,16 +26,17 @@ set t_Co=256                          " 256 color mode
 
 "" Editing
 set backspace=eol,start,indent        " Controlling What the Backspace Key Does
-"set timeoutlen=500                    " The time in milliseconds that is waited for a key code
+"set timeoutlen=500                   " The time in milliseconds that is waited for a key code
 set expandtab                         " Use the appropriate number of spaces to insert a <Tab>
 set autoindent                        " Copy indent from current line when starting a new line
 set copyindent                        " copy the previous indentation on autoindenting
 set shiftwidth=4                      " Number of spaces to use for each step of indent
 set tabstop=4                         " Number of spaces that a <Tab> in the file counts for
 set softtabstop=4
-"set textwidth=79                      " Set the text width
+"set textwidth=79                     " Set the text width
 set scrolloff=7                       " No scroll offset
-"set spell                             " Spell check
+"set spell                            " Spell check
+"set cinoptions=l1                     " Disable indentation of switch case
 
 " Font
 set encoding=UTF-8                    " Set default encoding to UTF-8
@@ -54,10 +55,12 @@ set foldenable                        " Code folding
 set foldcolumn=1                      " Add a bit extra margin to the left
 
 "" Display
-"set ruler                             " Shows line number and column
-"set rulerformat=%l\:%c                " Better ruler format
+"set ruler                            " Shows line number and column
+"set rulerformat=%l\:%c               " Better ruler format
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+highlight ColorColumn  ctermbg=lightcyan guibg=blue
 set number                            " Display line numbers
-set colorcolumn=120                  " Display a ruler at a specific line
+set colorcolumn=120                   " Display a ruler at a specific line
 
 "" Search
 set wildignore=*.o,*~,*.pyc           " Ignore these files while expanding wild chars
