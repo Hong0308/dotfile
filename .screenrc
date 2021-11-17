@@ -35,21 +35,5 @@ hardstatus string '%{= Kd} %{= Kd}%-w%{= Kb}[%{= KW}%n %t%{= Kb}]%{= Kd}%+w %-= 
 #shell "/usr/bin/zsh"
 
 # set tabs
-chdir /home/$USER/work/api
-screen -t "API"
-chdir /home/$USER/work/web
-screen -t "WEB"
-chdir /home/$USER/work/admin
-screen -t "ADMIN"
-chdir /home/$USER/work/models
-screen -t "MODEL"
-chdir /home/$USER/work/libs
-screen -t "LIB"
-chdir /home/$USER/scripts
-screen -t "SCRIPT"
-chdir /home/$USER/work/api-doc
-screen -t "API-DOC"
-chdir /home/$USER/work/queue
-screen -t "QUEUE"
-chdir /home/$USER/work/cron
-screen -t "CRON"
+#chdir /home/$USER/work/api
+#screen -t "API"
