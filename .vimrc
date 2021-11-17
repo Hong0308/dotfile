@@ -128,7 +128,7 @@ call plug#begin('~/.vim/plugged')
 
 "" Autocomplete
 "Plug 'zxqfl/tabnine-vim' " 機器學習提示
-Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 
 Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 let g:SuperTabRetainCompletionType = 2
@@ -140,10 +140,18 @@ Plug 'tpope/vim-fugitive' "git 操作
 
 "" Linting
 Plug 'vim-syntastic/syntastic' "語法檢查
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_php_checkers = ["php", "phpcs", "phpmd"]
+let g:syntastic_php_phpmd_post_args='design,unusedcode'
 
 "" Displaying
 Plug 'Yggdroot/indentLine' "縮排線
@@ -169,6 +177,6 @@ Plug '2072/PHP-Indenting-for-VIm' "PHP 縮排調整
 Plug 'rayburgemeestre/phpfolding.vim' "PHP function 自動收合
 
 Plug 'kamykn/spelunker.vim'
-let g:spelunker_white_list_for_user = ["Taobao", "Verybuy", "aftee", "cardlink", "htmlspecialchars", "kibana", "mweb", "mylove", "pixframework", "recaptcha", "sinopac", "tmall", "tuango", "vcoin"]
+let g:spelunker_white_list_for_user = []
 
 call plug#end()
