@@ -126,14 +126,17 @@ source ~/.vim/customize/status_line
 " Plugin -------------------------------------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
-"" Autocomplete
-"Plug 'zxqfl/tabnine-vim' " 機器學習提示
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
-
 Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 let g:SuperTabRetainCompletionType = 2
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabClosePreviewOnPopupClose = 1
+
+"" Autocomplete
+"Plug 'zxqfl/tabnine-vim' " 機器學習提示
+"Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'maxboisvert/vim-simple-complete'
+set complete-=t
+set complete-=i
 
 "" git
 Plug 'tpope/vim-fugitive' "git 操作
