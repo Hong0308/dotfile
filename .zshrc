@@ -7,8 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ys"
-#ZSH_THEME="amuse"
+#ZSH_THEME="ys"
+ZSH_THEME="amuse"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="jonathan"
 #ZSH_THEME=powerlevel10k/powerlevel10k
@@ -88,6 +88,8 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 DISABLE_AUTO_TITLE="true"
+
+alias gone='git fetch -p && for branch in $(git branch -vv | grep ": gone]" | awk "{print $1}"); do git branch -D $branch; done'
 
 
 # Mac 終端機轉碼
