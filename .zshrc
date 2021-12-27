@@ -89,7 +89,7 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 DISABLE_AUTO_TITLE="true"
 
-alias gone="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d"
+alias gone="git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
 
 
 # Mac 終端機轉碼
