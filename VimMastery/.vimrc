@@ -98,3 +98,8 @@ colorscheme everforest
 
 "" NERDTree
 nmap <Leader>n :NERDTreeToggle<cr>
+let NERDTreeHijackNetrw = 0
+
+"" CtrlP
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
