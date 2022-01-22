@@ -17,6 +17,7 @@ set autoindent                                              " Copy indent from c
 set copyindent                                              " Copy the previous indentation on autoindenting
 
 "" Backups
+set history=50                                              " Keep 50 lines of command line history
 set nobackup                                                " No *~ backup files
 set nowritebackup                                           " Do not make a backup before overwriting a file
 set noswapfile                                              " Do not use a swapfile for the buffer
@@ -41,7 +42,6 @@ set colorcolumn=120                                         " Display a ruler at
 set t_Co=256                                                " 256 color mode
 set showmatch                                               " Cursor shows matching ) and }
 set background=dark                                         " Dark background
-
 
 "" Font
 " https://github.com/tonsky/FiraCode 
