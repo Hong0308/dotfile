@@ -88,13 +88,9 @@ autocmd BufReadPost *
 so ~/.vim/plugins.vim
 
 "" Color scheme
-if has('termguicolors')
-	set termguicolors
-endif
-
-let g:everforest_background = 'soft'
-
-colorscheme everforest
+colorscheme gruvbox
+colorscheme tender
+colorscheme seoul256
 
 "" NERDTree
 nmap <Leader>n :NERDTreeToggle<cr>
