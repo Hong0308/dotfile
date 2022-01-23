@@ -54,6 +54,7 @@ set completeopt=longest,menu                                " Only insert the lo
 set pumheight=10                                            " The maximum number of items to show in the popup menu
 set wildmenu                                                " Wild char completion menu
 set wildchar=<TAB>                                          " Start wild expansion in the command line using <TAB>
+set complete=.,w,b,u                                        " Set our desired autocompletion matching.
 
 
 
@@ -88,7 +89,8 @@ nmap <Leader><space> :nohlsearch<cr>
 map <S-H> gT
 map <S-L> gt
 
-
+"" Sort PHP use statements
+vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
 
 "------ Autocmd ------------------------------------------------------------------------------------------------------
 
@@ -144,3 +146,26 @@ let g:syntastic_php_phpmd_post_args='design,unusedcode'
 let g:SuperTabRetainCompletionType = 2
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabClosePreviewOnPopupClose = 1
+
+"" Auto import class (use)
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+
+"" PHP Coding Standards Fixer
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
+"" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
