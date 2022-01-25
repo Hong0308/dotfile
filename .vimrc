@@ -80,6 +80,7 @@ set showmode                                                " Show current mode
 so ~/.vim/customize/status_line
 
 
+
 "------ Keybinding ---------------------------------------------------------------------------------------------------
 
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
@@ -91,6 +92,11 @@ map <S-L> gt
 
 "" Sort PHP use statements
 vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
+
+"" Ctags
+nmap <Leader><C-]> <C-w><C-]><C-w>T
+
+
 
 "------ Autocmd ------------------------------------------------------------------------------------------------------
 
