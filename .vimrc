@@ -146,7 +146,8 @@ let g:syntastic_mode_map = {'mode':'passive'}
 
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_php_checkers = ["php", "phpcs", "phpmd"]
-let g:syntastic_php_phpmd_post_args='design,unusedcode'
+let g:syntastic_php_phpmd_post_args = 'design,unusedcode'
+let g:syntastic_php_phpcs_args = '--standard=PSR2 -n'
 
 "" Super tab
 let g:SuperTabRetainCompletionType = 2
