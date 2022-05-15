@@ -111,8 +111,8 @@ autocmd BufReadPost *
 call plug#begin()
 
 " Color scheme
-Plug 'junegunn/seoul256.Vim'                                   " Low-contrast Vim color scheme based on Seoul Colors
-
-colorscheme seoul256
+Plug 'dracula/vim', { 'as': 'dracula' }                        " Dark theme for Vim
 
 call plug#end()
+
+colorscheme dracula
