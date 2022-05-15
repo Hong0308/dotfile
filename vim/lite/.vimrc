@@ -106,3 +106,13 @@ autocmd BufReadPost *
 \   exe "normal! g`\"" |
 \ endif
 
+"------ Plugins ------------------------------------------------------------------------------------------------------
+
+call plug#begin()
+
+" Color scheme
+Plug 'junegunn/seoul256.Vim'                                   " Low-contrast Vim color scheme based on Seoul Colors
+
+colorscheme seoul256
+
+call plug#end()
