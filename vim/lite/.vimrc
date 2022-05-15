@@ -48,15 +48,13 @@ set autoread                                                " Auto read when fil
 filetype on                                                 " Enable filetype detection
 filetype indent on                                          " Enable filetype-specific indenting
 filetype plugin on                                          " Enable filetype-specific plugins
-"
+
 "" Autocomplete
 set completeopt=longest,menu                                " Only insert the longest common text of the matches
 set pumheight=10                                            " The maximum number of items to show in the popup menu
 set wildmenu                                                " Wild char completion menu
 set wildchar=<TAB>                                          " Start wild expansion in the command line using <TAB>
 set complete=.,w,b,u                                        " Set our desired autocompletion matching.
-
-
 
 "------ Visuals ------------------------------------------------------------------------------------------------------
 
@@ -79,11 +77,9 @@ set laststatus=2                                            " Open status line
 set showmode                                                " Show current mode
 so ~/.vim/customize/status_line
 
-
-
 "------ Keybinding ---------------------------------------------------------------------------------------------------
 
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <Leader>ev :tabedit ~/.vim/lite/.vimrc<cr>
 nmap <Leader><space> :nohlsearch<cr>
 
 "" Tab change
@@ -95,8 +91,6 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr
 
 "" Ctags
 nmap <Leader><C-]> <C-w><C-]><C-w>T
-
-
 
 "------ Autocmd ------------------------------------------------------------------------------------------------------
 
@@ -112,67 +106,3 @@ autocmd BufReadPost *
 \   exe "normal! g`\"" |
 \ endif
 
-
-
-"------ Plugins ------------------------------------------------------------------------------------------------------
-
-so ~/.vim/plugins.vim
-
-"" Color scheme
-colorscheme gruvbox
-colorscheme tender
-colorscheme seoul256
-
-"" NERDTree
-nmap <Leader>n :NERDTreeToggle<cr>
-
-"" CtrlP
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
-
-"" Spelling check white list
-let g:spelunker_white_list_for_user = []
-
-"" Syntax checking
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {'mode':'passive'}
-
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_php_checkers = ["php", "phpcs", "phpmd"]
-let g:syntastic_php_phpmd_post_args = 'design,unusedcode'
-let g:syntastic_php_phpcs_args = '--standard=PSR2 -n'
-
-"" Super tab
-let g:SuperTabRetainCompletionType = 2
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-let g:SuperTabClosePreviewOnPopupClose = 1
-
-"" Auto import class (use)
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
-
-function! IPhpExpandClass()
-    call PhpExpandClass()
-    call feedkeys('a', 'n')
-endfunction
-autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
-
-"" PHP Coding Standards Fixer
-autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
-
-"" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"

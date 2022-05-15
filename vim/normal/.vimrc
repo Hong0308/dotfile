@@ -48,15 +48,13 @@ set autoread                                                " Auto read when fil
 filetype on                                                 " Enable filetype detection
 filetype indent on                                          " Enable filetype-specific indenting
 filetype plugin on                                          " Enable filetype-specific plugins
-"
+
 "" Autocomplete
 set completeopt=longest,menu                                " Only insert the longest common text of the matches
 set pumheight=10                                            " The maximum number of items to show in the popup menu
 set wildmenu                                                " Wild char completion menu
 set wildchar=<TAB>                                          " Start wild expansion in the command line using <TAB>
 set complete=.,w,b,u                                        " Set our desired autocompletion matching.
-
-
 
 "------ Visuals ------------------------------------------------------------------------------------------------------
 
@@ -79,11 +77,9 @@ set laststatus=2                                            " Open status line
 set showmode                                                " Show current mode
 so ~/.vim/customize/status_line
 
-
-
 "------ Keybinding ---------------------------------------------------------------------------------------------------
 
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <Leader>ev :tabedit ~/.vim/normal/.vimrc<cr>
 nmap <Leader><space> :nohlsearch<cr>
 
 "" Tab change
@@ -95,8 +91,6 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr
 
 "" Ctags
 nmap <Leader><C-]> <C-w><C-]><C-w>T
-
-
 
 "------ Autocmd ------------------------------------------------------------------------------------------------------
 
@@ -111,8 +105,6 @@ autocmd BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line('$') |
 \   exe "normal! g`\"" |
 \ endif
-
-
 
 "------ Plugins ------------------------------------------------------------------------------------------------------
 
