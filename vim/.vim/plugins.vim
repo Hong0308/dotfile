@@ -24,7 +24,6 @@ Plug 'ap/vim-css-color'                                        " CSS color name 
 Plug 'morhetz/gruvbox'                                         " Retro groove color scheme
 Plug 'junegunn/seoul256.Vim'                                   " Low-contrast Vim color scheme based on Seoul Colors
 Plug 'jacoborus/tender.vim'                                    " A 24bit colorscheme for Vim, Airline and Lightline
-Plug 'dracula/vim', { 'as': 'dracula' }                        " Dark theme for Vim
 
 "" PHP
 Plug 'StanAngeloff/php.vim'                                    " PHP for Vim

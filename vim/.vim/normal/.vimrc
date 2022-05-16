@@ -112,7 +112,6 @@ so ~/.vim/plugins.vim
 
 "" Color scheme
 colorscheme gruvbox
-colorscheme dracula
 colorscheme tender
 colorscheme seoul256
 

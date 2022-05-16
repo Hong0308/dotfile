@@ -111,8 +111,8 @@ autocmd BufReadPost *
 call plug#begin()
 
 " Color scheme
-Plug 'dracula/vim', { 'as': 'dracula' }                        " Dark theme for Vim
+Plug 'morhetz/gruvbox'                                         " Retro groove color scheme
 
 call plug#end()
 
-colorscheme dracula
+colorscheme gruvbox
