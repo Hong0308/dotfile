@@ -9,7 +9,8 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 #ZSH_THEME="ys"
-ZSH_THEME="amuse"
+#ZSH_THEME="amuse"
+ZSH_THEME="dracula"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="jonathan"
 #ZSH_THEME=powerlevel10k/powerlevel10k
@@ -18,7 +19,7 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -35,6 +36,7 @@ export LANG=en_US.UTF-8
 DISABLE_AUTO_TITLE="true"
 
 alias gone='git fetch -p && for branch in $(git branch -vv | grep ": gone]" | awk '"'"'{print $1}'"'"'); do git branch -D $branch; done'
+alias ggg='gfa && ggu && git submodule update --init && gone && git fetch xxtechec -t'
 
 # Mac terminal encode
 #export LC_ALL="zh_TW.UTF-8"
@@ -51,3 +53,18 @@ then
     ln -sf $SSH_AUTH_SOCK $SOCK
     export SSH_AUTH_SOCK=$SOCK
 fi
+
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+# 預設主要分支改成 develop
+git_main_branch() {
+  command git rev-parse --git-dir &>/dev/null || return
+  local branch
+  for branch in develop main master; do
+    if command git show-ref -q --verify refs/heads/$branch; then
+      echo $branch
+      return
+    fi
+  done
+  echo develop
+}
