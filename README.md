@@ -1,18 +1,20 @@
 # My Setting
 
-- Curl
+## Command line tools
+
+### Curl
 
 ```shell
 sudo apt-get install git curl
 ```
 
-- Plugin Manager
+### Plugin Manager
 
 ```shell
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-- Install plugin
+### Install plugin
 
 ```vim
 vim +PluginInstall +qall
@@ -26,11 +28,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 - zsh theme: powerlevel10k
 
-```
+```shell
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-- font: powerline
+## Font: powerline
 
 ```shell
 # clone
@@ -44,3 +46,7 @@ cd fonts
 cd ..
 rm -rf fonts
 ```
+
+## Check list
+
+- [] ssh-key
