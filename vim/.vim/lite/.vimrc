@@ -112,7 +112,11 @@ call plug#begin()
 
 " Color scheme
 Plug 'morhetz/gruvbox'                                         " Retro groove color scheme
+Plug 'junegunn/seoul256.vim'                                   " Low-contrast Vim color scheme based on Seoul Colors
+Plug 'jacoborus/tender.vim'                                    " A 24bit colorscheme for Vim, Airline and Lightline
 
 call plug#end()
 
+colorscheme tender
+colorscheme seoul256
 colorscheme gruvbox
